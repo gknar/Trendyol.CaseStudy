@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Trendyol.CaseStudy.Common\Trendyol.CaseStudy.Common.csproj" />
+    <ProjectReference Include="..\..\Trendyol.CaseStudy.Consumer\Trendyol.CaseStudy.Consumer.csproj" />
+    <ProjectReference Include="..\..\Trendyol.CaseStudy.Messaging\Trendyol.CaseStudy.Messaging.csproj" />
+    <ProjectReference Include="..\..\Trendyol.CaseStudy.Providers\Trendyol.CaseStudy.Providers.csproj" />
+    <ProjectReference Include="..\..\Trendyol.CaseStudy.Publisher\Trendyol.CaseStudy.Publisher.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Options">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.options\2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
