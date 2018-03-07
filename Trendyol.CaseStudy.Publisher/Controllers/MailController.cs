@@ -20,6 +20,7 @@ namespace Trendyol.CaseStudy.Publisher.Controllers
 
 
         /// <summary>
+        /// This class does something.
         /// </summary>
         /// <remarks>
         ///     POST /api/mail
@@ -53,8 +54,8 @@ namespace Trendyol.CaseStudy.Publisher.Controllers
                 {
                     Success = true,
                     Code = HttpStatusCode.OK,
-                    Message = "Mail message was queued up"
-                }
+                    Message = "Queued for Delivery"
+            }
             );
         }
     }

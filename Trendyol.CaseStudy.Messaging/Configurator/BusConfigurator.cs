@@ -82,14 +82,17 @@ namespace Trendyol.CaseStudy.Messaging.Configurator
             return this;
         }
 
-
+        /// <summary>
+        /// Returns the instance of a IBusControl using configured options and configurations
+        /// </summary>
+        /// <returns></returns>
         public IBusControl Build()
         {
             return ConfigureBus(_options);
         }
-
+        
         private IBusControl ConfigureBus(BusConfigurations options,
-            Action<IRabbitMqBusFactoryConfigurator, IRabbitMqHost> configurtions = null)
+            Action<IRabbitMqBusFactoryConfigurator, IRabbitMqHost> configurations = null)
         {
             return Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
@@ -109,7 +112,7 @@ namespace Trendyol.CaseStudy.Messaging.Configurator
                 UseInMemoryScheduler(cfg);
 
 
-                configurtions?.Invoke(cfg, host);
+                configurations?.Invoke(cfg, host);
             });
         }
 

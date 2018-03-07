@@ -4,12 +4,30 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Trendyol.CaseStudy.Common.Messages
 {
+
+    /// <summary>
+    /// This class does represent mail message model
+    /// </summary>
     public class MailContent : IMailCommand, IValidatableObject
     {
+
+
+        /// <summary>
+        /// Returns the instance of a MailContent
+        /// </summary>
         public MailContent()
         {
         }
 
+
+        /// <summary>
+        /// Returns the instance of a MailContent using the given parameters 
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="subject"></param>
+        /// <param name="body"></param>
+        /// <param name="contentType"></param>
         public MailContent(string from, string to, string subject, string body,
             MailContentType contentType)
         {
@@ -20,6 +38,15 @@ namespace Trendyol.CaseStudy.Common.Messages
             ContentType = contentType;
         }
 
+        /// <summary>
+        /// Returns the instance of a MailContent using the given parameters
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="subject"></param>
+        /// <param name="body"></param>
+        /// <param name="contentType"></param>
+        /// <param name="scheduleAt"></param>
         public MailContent(string from, string to, string subject, string body,
             MailContentType contentType, DateTime? scheduleAt)
         {
@@ -58,6 +85,10 @@ namespace Trendyol.CaseStudy.Common.Messages
         [Display(Name = "ContentType", Description = "Mail content type of the email.")]
         public MailContentType ContentType { get; set; }
 
+
+        /// <summary>
+        /// Date / Time to schedule email Delivery.
+        /// </summary>
         [Display(Name = "Schedule At",
             Description = "The time at which the email is to sent, format : dd/MM/yyyy HH:mm:ss UTC")]
         [DataType(DataType.DateTime)]

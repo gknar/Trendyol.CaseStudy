@@ -6,7 +6,7 @@ namespace Trendyol.CaseStudy.Providers
     public interface IMailProvider
     {
         /// <summary>
-        ///     Send a an email
+        /// Send an email
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>

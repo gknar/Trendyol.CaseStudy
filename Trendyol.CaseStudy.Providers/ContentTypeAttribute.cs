@@ -7,11 +7,17 @@ namespace Trendyol.CaseStudy.Providers
     {
         private readonly MailContentType[] _contentTypes;
 
+        
         public ContentTypeAttribute(params MailContentType[] contentTypes)
         {
             _contentTypes = contentTypes;
         }
-
+        
+        /// <summary>
+        /// Returns matched MailContentType using the contentType 
+        /// </summary>
+        /// <param name="contentType"></param>
+        /// <returns></returns>
         public virtual bool Match(MailContentType contentType)
         {
             if (_contentTypes != null)
